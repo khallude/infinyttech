@@ -1,0 +1,14 @@
+# Claude Code internal config
+.claude/
+CLAUDE.md
+AGENTS.md
+infnyt/CLAUDE.md
+infnyt/AGENTS.md
+
+# Node modules
+node_modules/
+infnyt/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
