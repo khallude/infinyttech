@@ -1,0 +1,9 @@
+# Claude Code internal config
+.claude/
+
+# Node modules (also covered by infnyt/.gitignore)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db

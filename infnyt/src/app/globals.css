@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Brand design tokens — dark premium theme
+   ============================================================ */
+@theme {
+  /* Teal brand palette — brightened for dark bg legibility */
+  --color-teal-50:  rgba(14,158,181,0.12);
+  --color-teal-100: rgba(14,158,181,0.20);
+  --color-teal-400: #2BB8CF;
+  --color-teal-500: #0E9EB5;
+  --color-teal-600: #0B84A0;
+
+  /* Dark surface palette */
+  --color-navy-800: #152E4A;
+  --color-navy-900: #0D2035;
+  --color-dark-surface: #0D1E33;
+  --color-dark-surface-2: #091728;
+
+  /* Neutral dark palette */
+  --color-gray-50:  rgba(255,255,255,0.02);
+  --color-gray-100: rgba(255,255,255,0.04);
+  --color-gray-200: rgba(255,255,255,0.07);
+  --color-gray-300: rgba(255,255,255,0.12);
+  --color-gray-400: rgba(255,255,255,0.22);
+  --color-gray-500: #6888A6;
+  --color-gray-700: #ACC5D9;
+
+  /* Page background */
+  --color-site-bg: #07101E;
+
+  /* Dark-tuned shadows */
+  --shadow-brand-sm:
+    0 1px 3px rgba(0,0,0,0.5),
+    0 1px 2px rgba(0,0,0,0.6);
+  --shadow-brand-md:
+    0 4px 16px rgba(0,0,0,0.45),
+    0 2px 6px rgba(0,0,0,0.35);
+  --shadow-brand-lg:
+    0 20px 50px rgba(0,0,0,0.55),
+    0 8px 20px rgba(0,0,0,0.45);
+  --shadow-nav:
+    0 4px 20px rgba(0,0,0,0.5),
+    0 1px 4px rgba(0,0,0,0.4);
+
+  /* Serif font (testimonial quote glyph only) */
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+}
+
+/* Inter resolved at runtime from next/font CSS variable */
+@theme inline {
+  --font-sans: var(--font-inter);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #07101E;
+  color: #ACC5D9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.deploy-cursor {
+  animation: blink 1s steps(2, end) infinite;
+}
